@@ -4,6 +4,8 @@ fuser -k 6653/tcp
 rm /var/lib/apt/lists/lock
 rm /var/cache/apt/archives/lock
 rm /var/lib/dpkg/lock
+systemctl stop openvswitch-switch.service
+systemctl start openvswitch-switch.service
 
 
 #
